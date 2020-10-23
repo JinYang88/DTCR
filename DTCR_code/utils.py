@@ -7,7 +7,7 @@ Created on Thu Sep  8 15:29:48 2016
 import tensorflow as tf
 import numpy as np
 import sys, time
-from scipy.misc import comb
+from scipy.special import comb
 from sklearn import metrics
 
 
@@ -48,7 +48,7 @@ def get_fake_sample(data):
             real_fake_labels[i, 0] = 1
         else:
             real_fake_labels[i, 1] = 1
-	return fake_data, real_fake_labels
+    return fake_data, real_fake_labels
 
 
 def _rnn_reformat(x, input_dims, n_steps):
